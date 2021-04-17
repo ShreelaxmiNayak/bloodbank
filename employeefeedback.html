@@ -1,0 +1,268 @@
+<html>
+<head>
+
+<style>
+.aa{
+color:black;
+font-size:18px;
+text-decoration:none;
+font-family:Verdana;
+opacity:0.5;
+color:white;
+}
+
+.aa:hover
+{
+opacity:1;
+font-size:20px;
+font-family:courier;
+background-color :
+}
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  padding: 14px 40px;
+  align-items:center;
+}
+
+.button1:hover {background-color: #e7e7e7;}
+
+
+.jumbotron
+{
+	margin-bottom:0px;
+}
+.navbar{
+	margin-bottom:50px;
+	border-radius:0px;
+}
+
+ 
+}
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px auto;
+  width:100%;
+  hight:100%;
+  font-family: 'Lato';
+  text-align: center;
+}
+
+h2 {
+  margin: 25px;
+  margin-bottom: 50px;
+  font-size: 2em;
+}
+.container {
+  display: grid;
+  height: 1500px;
+  width:100%;
+  grid-template-columns: 150px 150px 150px;
+  grid-gap: 10px;
+  font-family: 'Lato';
+  text-align: center;
+  font-size: 1.4em;
+  margin: 40px 30px;
+  justify-content: space-around;
+  background: #dedede;
+  align-content: space-evenly;
+}
+
+.item {
+	width:250px;
+	height:250px;
+    padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  font-size: 3em;
+  border: 1px solid black;
+  align-content: space-evenly;
+}
+
+.a,
+.b,
+.c {
+  background: #34495e;
+  align-content: strech;
+  justify-content: space-between;
+}
+
+.d,
+.e,
+.f {
+  background: #34495e;
+  align-content: space-evenly;
+}
+.g,
+.h,
+.i {
+  background: #34495e;
+  align-content: space-evenly;
+}
+
+.j,
+.k,
+.l {
+  background: #34495e;
+  align-content: space-evenly;
+}
+.dropbtn {
+  padding: 16px;
+  border: none;
+color:black; 
+font-size:18px;
+text-decoration:none;
+font-family:Verdana;
+opacity:0.5;
+color:white;
+background-color :#34495e;
+}
+
+/* The container  - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color:black;
+font-size:18px;
+text-decoration:none;
+font-family:Verdana;
+opacity:0.5;
+color:white;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #34495e;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #34495e;
+opacity:1;
+font-size:20px;
+font-family:courier;
+background-color :#34495e}
+
+</style>
+</head>
+<body >
+<table border="0" width="100%" align="center" bgcolor="#34495e"
+cellpadding="0" cellspacing="0" style="text-align:center">
+<tr height="70px">
+<td width="10%"><img src="companylogo.png"  height="70px" width="100%"></td>
+<td width="40%"></td>
+<td width="10%"><a href="page1.html" class="aa">Home</a></td>
+<td width="10%"><a href="aboutcompany.html" class="aa">About Company</a></td>
+<td width="10%"><a href="employeefeedback.html" class="aa">Meet our people</a></td>
+<td width="10%"><a href="login.html" class="aa">Login</a></td>
+<td width="10%">
+  <div class="dropdown">
+   <button class="dropbtn">Your profile</button>
+  <div class="dropdown-content">
+    <a href="yourprofile.html">Employee</a>
+    <a href="applicant.html">Applicant</a>
+	
+  </div>
+  </td>
+
+</tr>
+</table>
+
+
+
+<div class="container">
+  <div class="item a">
+		<h5 style="color:white;font-size:20px;">Ikenna</h5>
+		<img src="em1.jpg"  height="120px" width="120px">
+         <p style="color:white;font-size:15px;">Executive Director</p> 
+         <p style="color:white;font-size:15px;">Newyork</p> 
+  </div>
+  <div class="item b">
+  <h5 style="color:white;font-size:20px;">Venetia</h5>
+		<img src="em2.jpg"  height="120px" width="120px">
+         <p style="color:white;font-size:15px;">Associate</p> 
+         <p style="color:white;font-size:15px;">London</p> 
+  </div>
+  
+  <div class="item c">
+  <h5 style="color:white;font-size:20px;">Benny</h5>
+		<img src="em3.jpg"  height="120px" width="120px">
+         <p style="color:white;font-size:15px;">Executive Director/Vice president</p> 
+         <p style="color:white;font-size:15px;">Frankfurt</p> 
+  </div>
+  <div class="item d">
+  <h5 style="color:white;font-size:20px;">Michel</h5>
+		<img src="em4.jpg"  height="120px" width="120px">
+         <p style="color:white;font-size:15px;">Executive Director/Vice president</p> 
+         <p style="color:white;font-size:15px;">Salt Lake city</p> </div>
+  <div class="item e">
+  <h5 style="color:white;font-size:20px;">Manli</h5>
+		<img src="em5.jpg"  height="120px" width="120px">
+         <p style="color:white;font-size:15px;">Executive Director/Vice president</p> 
+         <p style="color:white;font-size:15px;">Sydney</p> </div>
+  <div class="item f">
+  <h5 style="color:white;font-size:20px;">Aubrey</h5>
+		<img src="em6.jpg"  height="120px" width="120px">
+         <p style="color:white;font-size:15px;">Managing Director</p> 
+         <p style="color:white;font-size:15px;">Tokyo</p> </div>
+  <div class="item g">
+  <h5 style="color:white;font-size:20px;">Kathrina</h5>
+		<img src="em7.jpg"  height="120px" width="120px">
+         <p style="color:white;font-size:15px;">Executive Director/Vice president</p> 
+         <p style="color:white;font-size:15px;">Newyork</p> </div>
+  <div class="item h"><h5 style="color:white;font-size:20px;">Stephanie</h5>
+		<img src="em8.jpg"  height="120px" width="120px">
+         <p style="color:white;font-size:15px;">Managing Director</p> 
+         <p style="color:white;font-size:15px;">Hong Kong</p> </div>
+  <div class="item i"><h5 style="color:white;font-size:20px;">Matthew</h5>
+		<img src="em9.jpg"  height="120px" width="120px">
+         <p style="color:white;font-size:15px;">Executive Director/Vice president</p> 
+         <p style="color:white;font-size:15px;">New york</p> </div>
+  <div class="item j"><h5 style="color:white;font-size:20px;">Bryant</h5>
+		<img src="em10.jpg"  height="120px" width="120px">
+         <p style="color:white;font-size:15px;">Associate</p> 
+         <p style="color:white;font-size:15px;">Salt lake city</p> </div>
+  <div class="item k"><h5 style="color:white;font-size:20px;">Kate</h5>
+		<img src="em11.jpg"  height="120px" width="120px">
+         <p style="color:white;font-size:15px;">Executive Director/Vice president</p> 
+         <p style="color:white;font-size:15px;">London</p> </div>
+  <div class="item l">
+  <h5 style="color:white;font-size:20px;">Lynn</h5>
+		<img src="em12.jpg"  height="120px" width="120px">
+         <p style="color:white;font-size:15px;">Executive Director/Vice president</p> 
+         <p style="color:white;font-size:15px;">Salt lake city</p> </div>
+</div>
+</tr>
+</body>
+</html>

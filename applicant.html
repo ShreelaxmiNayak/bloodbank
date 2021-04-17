@@ -1,0 +1,239 @@
+
+<!-- saved from url=(0058)file:///C:/Users/Shreelaxmi/Desktop/hrweb/yourprofile.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<style>
+.aa{
+color:black;
+font-size:18px;
+text-decoration:none;
+font-family:Verdana;
+opacity:0.5;
+color:white;
+}
+
+.aa:hover
+{
+opacity:1;
+font-size:20px;
+font-family:courier;
+background-color :
+}
+/* Dropdown Button */
+.dropbtn {
+  padding: 16px;
+  border: none;
+color:black; 
+font-size:18px;
+text-decoration:none;
+font-family:Verdana;
+opacity:0.5;
+color:white;
+background-color :#34495e;
+}
+
+/* The container  - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color:black;
+font-size:18px;
+text-decoration:none;
+font-family:Verdana;
+opacity:0.5;
+color:white;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #34495e;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #34495e;
+opacity:1;
+font-size:20px;
+font-family:courier;
+background-color :#34495e}
+
+</style>
+</head>
+<body>
+<?php
+require("db.php");
+if(isset($_POST['upload']))
+{   
+     
+ $file = rand(1000,100000)."-".$_FILES['file']['name'];
+    $file_loc = $_FILES['file']['tmp_name'];
+ $file_size = $_FILES['file']['size'];
+ $file_type = $_FILES['file']['type'];
+ $folder="upload/";
+ 
+ /* new file size in KB */
+ $new_size = $file_size/1024;  
+ /* new file size in KB */
+ 
+ /* make file name in lower case */
+ $new_file_name = strtolower($file);
+ /* make file name in lower case */
+ 
+ $final_file=str_replace(' ','-',$new_file_name);
+ 
+ if(move_uploaded_file($file_loc,$folder.$final_file))
+ {
+  $sql="INSERT INTO aplicant (name,email,phone number,education,jobdomain,experience,file_name, uploaded_on)VALUES ('$name','$email','$phone','$education','$jobdomain','$experience','".$fileName."', NOW())");
+  mysqli_query($conn,$sql);
+  
+ 
+  echo "File sucessfully upload";
+        
+  
+ }
+ else
+ {
+  
+  echo "Error.Please try again";
+		
+		}
+	}
+?>
+<table border="0" width="100%" align="center" bgcolor="#34495e" cellpadding="0" cellspacing="0" style="text-align:center">
+<tbody><tr height="70px">
+<td width="10%"><img src="companylogo.png" height="70px" width="100%"></td>
+<td width="40%"></td>
+<td width="10%"><a href="page1.html" class="aa">Home</a></td>
+<td width="10%"><a href="aboutcompany.html" class="aa">About Company</a></td>
+<td width="10%"><a href="empoyeefeedback.html" class="aa">Meet our people</a></td>
+<td width="10%"><a href="login.html" class="aa">Login</a></td>
+<td width="10%">
+  <div class="dropdown">
+   <button class="dropbtn">Your profile</button>
+  <div class="dropdown-content">
+    <a href="yourprofile.html">Employee</a>
+    <a href="applicant.html">Applicant</a>
+	
+  </div>
+  
+</div>
+
+
+</td>
+</tr>
+</tbody></table>
+<div>
+<img src="com.jpg" height="500px" width="100%">
+</div>
+<div>
+<h1 align="center">Apply For Job</h1>
+<form action="" method="post" name="" enctype="" id = "register">
+<table border="0" align="center" cellpadding="10" cellspacing="10" bgcolor="#ecf0f1">
+
+<td>Name</td>
+<td><input type="text" name="name" id="name" autofocus placeholder="Enter Name"
+required>
+<font color="red">*<span id="a1"></span></font></td>
+</tr>
+
+
+<tr>
+<td>Email</td>
+<td><input type="email" name="mail" id="mail" required>
+<font color="red">*<span id="a2"></span></font></td>
+</tr>
+<tr>
+
+<td>Phone</td>
+<td><input type="text" name="phone" id="phone" pattern="[0-9]{10}" maxlength="10"
+title="Phone number must contains numbers" required>
+<font color="red">*<span id="a4"></span></font></td>
+</tr>
+<tr>
+<td>Education</td>
+<td><input type="text" name="education" id="education" list="m1">
+<datalist id="m1">
+<option>B.E</option>
+<option>B.com</option>
+<option>B.sc</option>
+<option>M.com</option>
+<option>M.sc</option>
+<option>Diploma</option>
+<option>XII/PUC</option>
+</datalist>
+</td>
+</tr>
+<tr>
+<td>Job Domain</td>
+<td><input type="text" name="jobdomain" id="jobdomain" list="m2">
+<datalist id="m2">
+<option>Software</option>
+<option>Hardware</option>
+<option>Adverticing</option>
+<option>Office work</option>
+<option>Field work</option>
+<option>Management</option>
+</datalist>
+</td>
+</tr>
+<tr>
+<td>Experience level</td>
+<td><input type="text" name="experience" id="experience" list="m3">
+<datalist id="m3">
+<option>Fresher</option>
+<option>5 to 10 years</option>
+<option>10 and above</option>
+
+
+</datalist>
+</td>
+</tr>
+<tr>
+<td>Upload Your Resume</td>
+<td> <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Resume" name="submit">
+	</td>
+</tr>
+<tr>
+
+</td>
+</tr>
+
+
+
+<tr>
+<td><input type="submit" name="sub" id = "submit" ></a>
+<input type="reset" value="Clear">
+<!--
+
+<input type="button">
+<button>Login</button>
+<button type="submit">Login</button>
+<button type="button">Login</button>
+-->
+
+</td>
+</tr>
+</table>
+</form>
+</div>
